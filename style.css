@@ -19,6 +19,7 @@ p {
 }
 
 .main-container {
+  margin: 25px;
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(4, 1fr);
@@ -151,4 +152,70 @@ p {
 .self-care__cover {
   background-color: hsl(43, 84%, 65%);
   background-image: url("./images/icon-self-care.svg");
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 740px) {
+  body {
+    height: fit-content;
+    font-size: 18px;
+  }
+
+  .card {
+    padding: 6%;
+  }
+
+  .main-container {
+    width: calc(100% - 50px);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, auto);
+  }
+
+  .main__user-container {
+    grid-row: 1 / 2;
+  }
+
+  .user__profile {
+    padding: 6%;
+    gap: 5%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .user__timeframes {
+    padding: 6%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .info__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .info__duration {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 14px;
+  }
+
+  .user__photo {
+    width: 25%;
+  }
+}
+
+@media (max-width: 405px) {
+  body {
+    font-size: 12px;
+  }
 }
