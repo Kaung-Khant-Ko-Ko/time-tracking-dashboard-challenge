@@ -12,98 +12,165 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
   <body>
-    <main>
-      <div>
-        <div>
-          <img src="./images/image-jeremy.png" alt="Jeremy photo" />
-          <div>
+    <main class="main-container">
+      <div class="main__user-container">
+        <div class="user__profile">
+          <img
+            src="./images/image-jeremy.png"
+            alt="Jeremy photo"
+            class="user__photo"
+          />
+          <div class="user__info">
             <p>Report for</p>
-            <p>Jeremy Robson</p>
+            <p class="user__name">Jeremy Robson</p>
           </div>
         </div>
-        <div>
-          <p>Daily</p>
-          <p>Weekly</p>
-          <p>Monthly</p>
+        <div class="user__timeframes">
+          <p id="daily" class="timeframe">Daily</p>
+          <p id="weekly" class="timeframe default-timeframe">Weekly</p>
+          <p id="monthly" class="timeframe">Monthly</p>
         </div>
       </div>
 
-      <div>
-        <div><img src="./images/icon-work.svg" alt="Work icon" /></div>
-        <div>
-          <div>
-            <p>Work</p>
-            <img src="./images/icon-ellipsis.svg" alt="More icon" />
+      <div class="main__work-container">
+        <div class="work__cover cover"></div>
+        <div class="card">
+          <div class="info__title-container">
+            <p class="category">Work</p>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+                class="icon"
+              />
+            </svg>
           </div>
-          <p><span>32</span>hrs</p>
-          <p>Last Week - <span>36</span>hrs</p>
+          <div class="info__container">
+            <p class="info__duration"><span id="work_curr"></span>hrs</p>
+            <p>Last Week - <span id="work_prev"></span>hrs</p>
+          </div>
         </div>
       </div>
 
-      <div>
-        <div><img src="./images/icon-play.svg" alt="Play icon" /></div>
-        <div>
-          <div>
-            <p>Play</p>
-            <img src="./images/icon-ellipsis.svg" alt="More icon" />
+      <div class="main__play-container">
+        <div class="play__cover cover"></div>
+        <div class="card">
+          <div class="info__title-container">
+            <p class="category">Play</p>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+                class="icon"
+              />
+            </svg>
           </div>
-          <p><span>10</span>hrs</p>
-          <p>Last Week - <span>8</span>hrs</p>
+          <div class="info__container">
+            <p class="info__duration"><span id="play_curr"></span>hrs</p>
+            <p>Last Week - <span id="play_prev"></span>hrs</p>
+          </div>
         </div>
       </div>
 
-      <div>
-        <div><img src="./images/icon-study.svg" alt="Study icon" /></div>
-        <div>
-          <div>
-            <p>Study</p>
-            <img src="./images/icon-ellipsis.svg" alt="More icon" />
+      <div class="main__study-container">
+        <div class="study__cover cover"></div>
+        <div class="card">
+          <div class="info__title-container">
+            <p class="category">Study</p>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+                class="icon"
+              />
+            </svg>
           </div>
-          <p><span>4</span>hrs</p>
-          <p>Last Week - <span>7</span>hrs</p>
+          <div class="info__container">
+            <p class="info__duration"><span id="study_curr"></span>hrs</p>
+            <p>Last Week - <span id="study_prev"></span>hrs</p>
+          </div>
         </div>
       </div>
 
-      <div>
-        <div><img src="./images/icon-exercise.svg" alt="Exercise icon" /></div>
-        <div>
-          <div>
-            <p>Exercise</p>
-            <img src="./images/icon-ellipsis.svg" alt="More icon" />
+      <div class="main__exercise-container">
+        <div class="exercise__cover cover"></div>
+        <div class="card">
+          <div class="info__title-container">
+            <p class="category">Exercise</p>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+                class="icon"
+              />
+            </svg>
           </div>
-          <p><span>4</span>hrs</p>
-          <p>Last Week - <span>5</span>hrs</p>
+          <div class="info__container">
+            <p class="info__duration"><span id="exercise_curr"></span>hrs</p>
+            <p>Last Week - <span id="exercise_prev"></span>hrs</p>
+          </div>
         </div>
       </div>
 
-      <div>
-        <div><img src="./images/icon-social.svg" alt="Social icon" /></div>
-        <div>
-          <div>
-            <p>Exercise</p>
-            <img src="./images/icon-ellipsis.svg" alt="More icon" />
+      <div class="main__social-container">
+        <div class="social__cover cover"></div>
+        <div class="card">
+          <div class="info__title-container">
+            <p class="category">Social</p>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+                class="icon"
+              />
+            </svg>
           </div>
-          <p><span>5</span>hrs</p>
-          <p>Last Week - <span>10</span>hrs</p>
+          <div class="info__container">
+            <p class="info__duration"><span id="social_curr"></span>hrs</p>
+            <p>Last Week - <span id="social_prev"></span>hrs</p>
+          </div>
         </div>
       </div>
 
-      <div>
-        <div>
-          <img src="./images/icon-self-care.svg" alt="Self-care icon" />
-        </div>
-        <div>
-          <div>
-            <p>Exercise</p>
-            <img src="./images/icon-ellipsis.svg" alt="More icon" />
+      <div class="main__self-care-container">
+        <div class="self-care__cover cover"></div>
+        <div class="card">
+          <div class="info__title-container">
+            <p class="category">Self Care</p>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+                class="icon"
+              />
+            </svg>
           </div>
-          <p><span>2</span>hrs</p>
-          <p>Last Week - <span>2</span>hrs</p>
+          <div class="info__container">
+            <p class="info__duration"><span id="self_care_curr"></span>hrs</p>
+            <p>Last Week - <span id="self_care_prev"></span>hrs</p>
+          </div>
         </div>
       </div>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

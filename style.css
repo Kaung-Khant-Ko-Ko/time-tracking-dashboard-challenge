@@ -1,0 +1,154 @@
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(226, 43%, 10%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: hsl(236, 100%, 87%);
+}
+
+p {
+  margin: 10px 0px;
+}
+
+.main-container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.card {
+  padding: 12%;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+
+  position: relative;
+  bottom: 10px;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: hsl(235, 45%, 61%);
+}
+
+.icon:hover {
+  fill: white;
+}
+
+.cover {
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: 88% center;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.info__title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category {
+  font-weight: 500;
+  color: white;
+}
+
+.info__duration {
+  margin-top: 20px;
+  font-size: 3em;
+  font-weight: 400;
+  color: white;
+}
+
+.main__user-container {
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.user__profile {
+  padding: 12%;
+  background-color: hsl(246, 80%, 60%);
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+
+  position: relative;
+  bottom: 0px;
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.user__photo {
+  width: 35%;
+}
+
+.user__name {
+  font-size: 2em;
+  font-weight: 400;
+  color: white;
+}
+
+.user__timeframes {
+  padding: 12%;
+  background-color: hsl(235, 46%, 20%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 0px 0px 15px 15px;
+
+  position: relative;
+  bottom: 10px;
+}
+
+.timeframe {
+  width: fit-content;
+}
+
+.default-timeframe {
+  color: white;
+}
+
+.timeframe:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.work__cover {
+  background-color: hsl(15, 100%, 70%);
+  background-image: url("./images/icon-work.svg");
+}
+
+.play__cover {
+  background-color: hsl(195, 74%, 62%);
+  background-image: url("./images/icon-play.svg");
+}
+
+.study__cover {
+  background-color: hsl(348, 100%, 68%);
+  background-image: url("./images/icon-study.svg");
+}
+
+.exercise__cover {
+  background-color: hsl(145, 58%, 55%);
+  background-image: url("./images/icon-exercise.svg");
+}
+
+.social__cover {
+  background-color: hsl(264, 64%, 52%);
+  background-image: url("./images/icon-social.svg");
+}
+
+.self-care__cover {
+  background-color: hsl(43, 84%, 65%);
+  background-image: url("./images/icon-self-care.svg");
+}
